@@ -233,7 +233,7 @@ const ContactSection: React.FC = () => {
                   <div>
                     <div className="font-semibold text-white mb-1">Location</div>
                     <div className="text-muted-foreground">
-                      {CONTACT_INFO.address.full}
+                      Wadala Rd, Al Madina Colony, Mirajkar Nagar, Dr.Homi Bhabha Nagar, Nashik, Maharashtra 422214
                     </div>
                   </div>
                 </div>
