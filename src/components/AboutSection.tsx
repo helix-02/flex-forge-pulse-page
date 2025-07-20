@@ -72,7 +72,7 @@ const AboutSection: React.FC = () => {
         {/* SECTION HEADER */}
         <div className="text-center mb-16">
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl lg:text-6xl mb-6">
-            <span className="text-white">{ABOUT_CONTENT.title}</span>
+            <span className="text-white">About Fitness studio by ameen ansari</span>
           </h2>
           <p className="text-xl md:text-2xl text-electric-blue font-semibold mb-8">
             {ABOUT_CONTENT.subtitle}
