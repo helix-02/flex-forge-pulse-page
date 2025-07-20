@@ -1,17 +1,8 @@
-/* 
- * GALLERY SECTION COMPONENT - Gym Website
- * CUSTOMIZATION GUIDE:
- * - Replace placeholder images with your actual gym photos
- * - Edit image descriptions and categories
- * - Update the number of images displayed
- * - Add or modify gallery categories
- */
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 
-// EDIT GALLERY CONTENT HERE - Replace with your actual gym photos
+// Replace with your actual gym photos
 const GALLERY_IMAGES = [
   {
     id: 1,
@@ -65,15 +56,15 @@ const SECTION_CONTENT = {
   videoDescription: "Watch our complete facility walkthrough"
 };
 
-// EDIT CATEGORIES HERE
 const CATEGORIES = ["All", "Equipment", "Classes", "Cardio", "Training"];
 
 const GallerySection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const filteredImages = selectedCategory === "All" 
-    ? GALLERY_IMAGES 
+  const filteredImages = selectedCategory === "All"
+    ? GALLERY_IMAGES
     : GALLERY_IMAGES.filter(img => img.category === selectedCategory);
 
   const nextImage = () => {
@@ -85,14 +76,21 @@ const GallerySection: React.FC = () => {
   };
 
   const handleWatchTour = () => {
-    // CUSTOMIZE: Add your video modal or virtual tour logic here
-    alert("Add your virtual tour video logic here!");
+    setIsVideoOpen(true);
   };
+
+  // Disable scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = isVideoOpen ? 'hidden' : 'auto';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isVideoOpen]);
 
   return (
     <section id="gallery" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        
+
         {/* SECTION HEADER */}
         <div className="text-center mb-16">
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl lg:text-6xl mb-6">
@@ -108,8 +106,8 @@ const GallerySection: React.FC = () => {
 
         {/* VIRTUAL TOUR CTA */}
         <div className="text-center mb-12">
-          <Button 
-            variant="energy" 
+          <Button
+            variant="energy"
             size="lg"
             onClick={handleWatchTour}
             className="group"
@@ -150,7 +148,7 @@ const GallerySection: React.FC = () => {
                   alt={filteredImages[currentImageIndex].alt}
                   className="w-full h-full object-cover transition-all duration-500"
                 />
-                
+
                 {/* IMAGE OVERLAY */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-6">
                   <div className="text-white font-semibold text-lg mb-2">
@@ -198,8 +196,8 @@ const GallerySection: React.FC = () => {
             <div
               key={image.id}
               className={`aspect-square bg-card rounded-lg overflow-hidden cursor-pointer transition-all duration-300 border-2 ${
-                index === currentImageIndex 
-                  ? 'border-electric-blue shadow-neon' 
+                index === currentImageIndex
+                  ? 'border-electric-blue shadow-neon'
                   : 'border-transparent hover:border-electric-blue/50'
               }`}
               onClick={() => setCurrentImageIndex(index)}
@@ -213,6 +211,35 @@ const GallerySection: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* VIDEO MODAL */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center px-4">
+          <div className="bg-background rounded-2xl overflow-hidden relative w-full max-w-4xl shadow-lg">
+
+            {/* Close Button */}
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-3 right-3 text-white hover:text-red-500 text-2xl font-bold"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+
+            {/* YouTube Embed */}
+            <div className="aspect-video w-full">
+             <iframe
+  className="w-full h-full"
+  src="https://www.youtube.com/embed/d-Zo0ouDhso?autoplay=1"
+  title="Virtual Gym Tour"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

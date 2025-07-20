@@ -13,16 +13,16 @@ import { Play, Users, Award, Dumbbell } from 'lucide-react';
 
 // EDIT HERO CONTENT HERE
 const HERO_CONTENT = {
-  title: "TRANSFORM YOUR BODY",
-  subtitle: "TRANSFORM YOUR LIFE",
+  title: "FITNESS STUDIO",
+  subtitle: "TRANSFORM YOUR BODY",
   description: "Join our elite fitness community and unlock your full potential. State-of-the-art equipment, expert trainers, and a supportive environment await you.",
   primaryCTA: "Start Your Journey",
   secondaryCTA: "Watch Our Story",
   // CHANGE THESE STATS TO MATCH YOUR GYM
   stats: [
     { number: "500+", label: "Active Members", icon: Users },
-    { number: "15+", label: "Expert Trainers", icon: Award },
-    { number: "24/7", label: "Access Available", icon: Dumbbell },
+    { number: "7+", label: "Expert Trainers", icon: Award },
+    { number: "Flexible", label: "Access Available", icon: Dumbbell },
   ]
 };
 

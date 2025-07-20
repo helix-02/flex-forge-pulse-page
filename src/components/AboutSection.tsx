@@ -15,10 +15,10 @@ import { Target, Heart, Trophy, Users, Clock, Shield } from 'lucide-react';
 const ABOUT_CONTENT = {
   title: "About Our Fitness Studio",
   subtitle: "Where Champions Are Made",
-  description: "For over 10 years, we've been dedicated to helping individuals achieve their fitness goals and transform their lives. Our state-of-the-art facility combined with expert guidance creates the perfect environment for your fitness journey.",
-  yearsExperience: "10+",
-  happyMembers: "2000+",
-  certifiedTrainers: "25+",
+  description: "For over 7 years, we've been dedicated to helping individuals achieve their fitness goals and transform their lives. Our state-of-the-art facility combined with expert guidance creates the perfect environment for your fitness journey.",
+  yearsExperience: "7+",
+  happyMembers: "500+",
+  certifiedTrainers: "2+",
   cta: "Learn More About Us"
 };
 
@@ -47,7 +47,7 @@ const FEATURES = [
   {
     icon: Clock,
     title: "Flexible Schedule",
-    description: "24/7 access and flexible class schedules to fit your busy lifestyle."
+    description: " access and flexible class schedules to fit your busy lifestyle."
   },
   {
     icon: Shield,

@@ -23,7 +23,7 @@ const navItems = [
 ];
 
 // EDIT CONTACT INFO HERE
-const PHONE_NUMBER = "+1 (555) 123-4567"; // Change to your phone number
+const PHONE_NUMBER = "+91 96892305519"; // Change to your phone number
 const CTA_TEXT = "Join Today"; // Change call-to-action text
 
 const Header: React.FC = () => {
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
             <img 
               src="/lovable-uploads/32e1919a-74cb-4b0f-9c45-19beec07a96e.png" 
               alt="Fitness Studio Logo" 
-              className="h-12 w-auto animate-float"
+              className="h-14 w-auto animate-float"
             />
           </div>
 

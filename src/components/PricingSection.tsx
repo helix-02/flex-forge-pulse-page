@@ -15,22 +15,20 @@ import { Check, Star, Zap } from 'lucide-react';
 const PRICING_PLANS = [
   {
     name: "Basic",
-    price: "$29",
+    price: "₹1000",
     period: "/month",
     description: "Perfect for getting started with your fitness journey",
     features: [
       "Gym access during off-peak hours",
-      "Basic equipment usage",
-      "Locker room access",
-      "1 guest pass per month",
-      "Mobile app access"
+      "Every equipment usage",
+      "Guidance From Certified Coaches"
     ],
     popular: false,
-    cta: "Get Started"
+    cta: "Beginner's"
   },
   {
     name: "Premium",
-    price: "$59",
+    price: "₹7000",
     period: "/month",
     description: "Most popular choice for serious fitness enthusiasts",
     features: [
@@ -39,37 +37,18 @@ const PRICING_PLANS = [
       "Unlimited group classes",
       "3 guest passes per month",
       "Nutrition consultation",
-      "Mobile app with workout tracking",
-      "Towel service"
     ],
     popular: true,
     cta: "Most Popular"
   },
-  {
-    name: "Elite",
-    price: "$99",
-    period: "/month",
-    description: "Complete fitness solution with personal attention",
-    features: [
-      "Everything in Premium",
-      "2 personal training sessions/month",
-      "Unlimited guest passes",
-      "Priority class booking",
-      "Massage therapy (1 session/month)",
-      "Nutrition meal planning",
-      "VIP locker access",
-      "Exclusive member events"
-    ],
-    popular: false,
-    cta: "Go Elite"
-  }
+  
 ];
 
 const SECTION_CONTENT = {
   title: "Choose Your Plan",
   subtitle: "Flexible Memberships for Every Goal",
-  description: "Join thousands of members who have transformed their lives. Choose the plan that fits your lifestyle and goals.",
-  guarantee: "30-day money-back guarantee • No long-term contracts • Cancel anytime"
+  description: "Join Hundereds of members who have transformed their lives. Choose the plan that fits your lifestyle and goals.",
+  guarantee: "20% Discount On Taking Annual Plan • No long-term contracts • Cancel anytime"
 };
 
 const PricingSection: React.FC = () => {

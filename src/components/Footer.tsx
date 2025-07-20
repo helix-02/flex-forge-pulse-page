@@ -17,13 +17,13 @@ const FOOTER_INFO = {
   description: "Your premier destination for fitness excellence. Join our community and discover what your body is truly capable of achieving.",
   // UPDATE YOUR CONTACT INFO
   contact: {
-    address: "123 Fitness Street, New York, NY 10001",
-    phone: "+1 (555) 123-4567",
-    email: "info@fitnessstudio.com"
+    address: "Wadala Rd, Al Madina Colony, Mirajkar Nagar, Dr.Homi Bhabha Nagar, Nashik, Maharashtra 422214",
+    phone: "+91 9689230519",
+    email: "aminansari9216@gmail.com"
   },
   // UPDATE COPYRIGHT INFO
   copyright: "© 2024 Fitness Studio. All rights reserved.",
-  designCredit: "Gym by Amin Ansari" // As shown in your logo
+  designCredit: "Gym by Ameen Ansari" // As shown in your logo
 };
 
 // EDIT NAVIGATION LINKS HERE
@@ -42,8 +42,7 @@ const SERVICES_LINKS = [
   { name: "Group Classes", href: "#services" },
   { name: "Strength Training", href: "#services" },
   { name: "Cardio Workouts", href: "#services" },
-  { name: "HIIT Classes", href: "#services" },
-  { name: "Recovery & Wellness", href: "#services" }
+  { name: "HIIT Classes", href: "#services" }
 ];
 
 // EDIT SOCIAL MEDIA LINKS HERE
@@ -57,7 +56,7 @@ const SOCIAL_LINKS = [
   {
     name: "Instagram", 
     icon: Instagram,
-    url: "https://instagram.com/your-gym", // Update with your Instagram URL
+    url: "https://www.instagram.com/fitnessstudio1692?igsh=MWs3eG5vZTQwanc2cQ==", // Update with your Instagram URL
     color: "hover:text-pink-500"
   },
   {

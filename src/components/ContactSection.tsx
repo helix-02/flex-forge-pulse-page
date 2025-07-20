@@ -17,21 +17,21 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Youtube } fro
 const CONTACT_INFO = {
   // UPDATE YOUR GYM'S ADDRESS
   address: {
-    street: "123 Fitness Street",
-    city: "New York",
-    state: "NY",
-    zip: "10001",
-    full: "123 Fitness Street, New York, NY 10001"
+    street: "Wadala Rd, Al Madina Colony, Mirajkar Nagar,Dr.Homi Bhabha Nagar",
+    city: "NASHIK",
+    state: "Maharashtra",
+    zip: "422214",
+    full: "Wadala Rd, Al Madina Colony, Mirajkar Nagar, Dr.Homi Bhabha Nagar, Nashik, Maharashtra 422214"
   },
   // UPDATE YOUR PHONE NUMBER
-  phone: "+1 (555) 123-4567",
+  phone: "+91 9689230519",
   // UPDATE YOUR EMAIL
-  email: "info@fitnessstudio.com",
+  email: "aminansari9216@gmail.com",
   // UPDATE YOUR OPERATING HOURS
   hours: {
-    weekdays: "5:00 AM - 11:00 PM",
-    saturday: "6:00 AM - 10:00 PM", 
-    sunday: "7:00 AM - 9:00 PM"
+    weekdays: "6:30 AM - 11:00 PM",
+    saturday: "6:30 AM - 10:00 PM", 
+    sunday: "Closed"
   }
 };
 
@@ -46,7 +46,7 @@ const SOCIAL_LINKS = [
   {
     name: "Instagram", 
     icon: Instagram,
-    url: "https://instagram.com/your-gym", // Update with your Instagram URL
+    url: "https://www.instagram.com/fitnessstudio1692?igsh=MWs3eG5vZTQwanc2cQ==", // Update with your Instagram URL
     color: "hover:text-pink-500"
   },
   {
@@ -176,7 +176,7 @@ const ContactSection: React.FC = () => {
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="bg-background border-border focus:border-electric-blue"
-                    placeholder="(555) 123-4567"
+                    placeholder="8672275685"
                   />
                 </div>
                 

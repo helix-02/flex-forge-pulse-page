@@ -28,13 +28,6 @@ const SERVICES = [
     featured: false
   },
   {
-    icon: Users,
-    title: "Group Classes",
-    description: "Join our energetic group fitness classes designed for all fitness levels and interests.",
-    features: ["Yoga", "Pilates", "Zumba", "Boot Camp"],
-    featured: false
-  },
-  {
     icon: Timer,
     title: "Personal Training",
     description: "One-on-one coaching with certified trainers to maximize your results and achieve your goals faster.",
@@ -48,13 +41,6 @@ const SERVICES = [
     features: ["Fat Burning", "Metabolic Boost", "Time Efficient", "All Levels Welcome"],
     featured: false
   },
-  {
-    icon: Activity,
-    title: "Recovery & Wellness",
-    description: "Complete recovery services including massage therapy, stretching, and wellness programs.",
-    features: ["Massage Therapy", "Stretching Sessions", "Sauna", "Recovery Zones"],
-    featured: false
-  }
 ];
 
 const SECTION_CONTENT = {
