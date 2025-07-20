@@ -2,41 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* GYM WEBSITE DESIGN SYSTEM - DARK ENERGETIC THEME
+ * CUSTOMIZATION GUIDE:
+ * - Change brand colors below (electric-blue, neon-green, gold, orange)
+ * - Modify gradients for different visual effects
+ * - Update fonts by changing font family imports
+ * - All colors are HSL for easy customization
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* MAIN THEME COLORS - Easy to customize */
+    --background: 240 10% 3.9%;           /* Dark background */
+    --foreground: 0 0% 98%;               /* Light text */
+    
+    /* BRAND COLORS - Change these for your brand */
+    --electric-blue: 217 91% 60%;         /* Primary brand color */
+    --neon-green: 142 76% 36%;           /* Success/energy color */
+    --gold: 45 93% 58%;                  /* Premium/accent color (matches logo) */
+    --orange: 24 95% 60%;                /* Call-to-action color */
+    --purple: 262 90% 67%;               /* Secondary accent */
+    
+    /* SURFACE COLORS */
+    --card: 240 10% 7%;                  /* Card backgrounds */
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 7%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* SEMANTIC COLORS */
+    --primary: 217 91% 60%;              /* Electric blue */
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 240 4% 16%;             /* Dark gray */
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 5% 24%;                 /* Muted elements */
+    --muted-foreground: 240 5% 64%;
+    
+    --accent: 142 76% 36%;               /* Neon green */
+    --accent-foreground: 0 0% 9%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 217 91% 60%;
+    
+    /* DESIGN TOKENS */
+    --radius: 0.75rem;
+    
+    /* GRADIENTS - Customize for different visual effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--purple)));
+    --gradient-energy: linear-gradient(135deg, hsl(var(--neon-green)), hsl(var(--electric-blue)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--orange)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--background)), hsl(240 10% 7%));
+    
+    /* SHADOWS */
+    --shadow-neon: 0 0 20px hsl(var(--electric-blue) / 0.5);
+    --shadow-green: 0 0 20px hsl(var(--neon-green) / 0.5);
+    --shadow-gold: 0 0 20px hsl(var(--gold) / 0.3);
+    
+    /* ANIMATIONS */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +132,91 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  /* CUSTOM UTILITY CLASSES */
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-energy {
+    background: var(--gradient-energy);
+  }
+  
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+  
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+  
+  .shadow-green {
+    box-shadow: var(--shadow-green);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* ANIMATIONS */
+  @keyframes pulse-neon {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--electric-blue) / 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--electric-blue) / 0.8);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 10px hsl(var(--electric-blue) / 0.5);
+    }
+    50% {
+      text-shadow: 0 0 20px hsl(var(--electric-blue) / 0.8);
+    }
+  }
+  
+  .animate-pulse-neon {
+    animation: pulse-neon 2s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
   }
 }
