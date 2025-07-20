@@ -98,7 +98,7 @@ const AboutSection: React.FC = () => {
           </div>
           <div className="text-center">
             <div className="text-5xl font-orbitron font-black text-gold mb-2">
-              {ABOUT_CONTENT.certifiedTrainers}
+              3+
             </div>
             <div className="text-muted-foreground font-inter">Certified Trainers</div>
           </div>
